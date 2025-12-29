@@ -15,11 +15,7 @@ def cift_topla(sayilar):
     """
     Veri listesindeki çift sayıları toplayıp değerini döndüren fonksiyon.
     """
-    toplam = 0
-    for sayi in sayilar:
-        if sayi % 2 == 0:
-            toplam += sayi
-    return toplam
+    return sum(sayi for sayi in sayilar if sayi % 2 == 0)
 
 def main():
     sayilar = fibonacci()
