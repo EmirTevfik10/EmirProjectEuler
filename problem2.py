@@ -1,25 +1,26 @@
-def fibonacci():
+def fibonacci(max_value):
     """
     4.000.000 değerini geçinceye kadar fibonacci listesi üreten ve bu listeyi döndüren fonksiyon.
     """
-    sayilar = [1,2]
+    numbers = [1,2]
     while True:
-        sayi = sayilar[-1] + sayilar [-2]
-        if sayi > 4000000:
+        next_number = numbers[-1] + numbers[-2]
+        if next_number > max_value:
             break
         else:
-            sayilar.append(sayi)
-    return sayilar
+            numbers.append(next_number)
+    return numbers
 
-def cift_topla(sayilar):
+def sum_even_numbers(numbers):
     """
     Veri listesindeki çift sayıları toplayıp değerini döndüren fonksiyon.
     """
-    return sum(sayi for sayi in sayilar if sayi % 2 == 0)
+    return sum(num for num in numbers if num % 2 == 0)
 
 def main():
-    sayilar = fibonacci()
-    toplam = cift_topla(sayilar)
-    print(toplam)
+    max_value = 4000000
+    numbers = fibonacci(max_value)
+    total = sum_even_numbers(numbers)
+    print(total)
 
 main()
