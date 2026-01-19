@@ -1,4 +1,7 @@
 def three_digit_number():
+    """
+    Docstring for three_digit_number: This function returns polindrom number which the product of two 3-digit numbers
+    """
     polindrom = 0
     for i in range(999,99,-1):
         for j in range(i,99,-1):
