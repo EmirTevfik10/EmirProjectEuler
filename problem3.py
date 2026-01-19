@@ -7,7 +7,6 @@ def find_largest_prime_factor(max_value):
     while max_value % 2 == 0:
         max_prime = 2
         max_value //= 2
-    
     while num * num <= max_value:
         while max_value % num == 0:
             max_prime = num
