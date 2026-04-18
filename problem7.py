@@ -1,15 +1,18 @@
-asal_sayilar = [2]
-sayi = 3
-while len(asal_sayilar) < 10001:
-    bs = 0
-    dene = sayi
-    for asal in asal_sayilar:
-        while dene % asal == 0:
-            dene //= asal
-            bs += 1
-        if bs > 1:
+prime_numbs = [2]
+numb = 3
+
+while len(prime_numbs) < 10001:
+    isPrime = True
+    
+    for prime in prime_numbs:
+        if prime * prime > numb:
             break
-    if bs == 1:
-        print(dene)    
-        asal_sayilar.append(dene) 
-    sayi += 1
+        if numb % prime == 0:
+            isPrime = False
+            break
+
+    if isPrime:    
+        prime_numbs.append(numb) 
+    
+    numb += 2
+print(prime_numbs[-1])
