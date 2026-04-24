@@ -1,15 +1,12 @@
-number = 3
-total = 2
-while number < 2000000:
-    asal_mi = True
-    for i in range(3, number):
-        if number % i == 0:
-            asal_mi = False
+def is_prime(n):
+    for i in range(3,n):
+        if i ** 2 > n:
             break
-        if i ** 2 > number:
-            break
-    if asal_mi:
-        total += number
-    number += 2
-    print(number)
-print(total)
+        if n % i == 0:
+            return False
+    return True
+
+def sum_of_primes(limit):
+    return sum(n for n in range(3,limit,2) if is_prime(n)) + 2
+
+print(sum_of_primes(2000000))
