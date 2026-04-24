@@ -14,5 +14,4 @@ def main():
     a, b, c = find_triplet(1000)
     print(f"{a} x {b} x {c} = {a * b * c}")
 
-main()
-        
+main()       
